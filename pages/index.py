@@ -16,17 +16,15 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ## How will you be murdered?
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            Have how you ever wondered how you would be murdered?  Will you be that 69% that will be killed with a gun or will you be that 31% that won't be? 
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
-
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            This application will allow you to find out the answer to your question...  but do you really want to know?  
 
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Predict murder weapon', color='primary'), href='/predictions')
     ],
     md=4,
 )
