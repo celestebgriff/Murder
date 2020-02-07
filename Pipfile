@@ -17,8 +17,8 @@ scikit-learn = "==0.22.1"
 category-encoders = "==2.1.0"
 xgboost = "==0.90"
 sklearn = "*"
-sklearn-preprocessing-label = "*"
-sklearn-preprocessing = "*"
+#sklearn-preprocessing-label = "*"
+#sklearn-preprocessing = "*"
 
 [requires]
 python_version = "3"
