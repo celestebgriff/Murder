@@ -33,19 +33,18 @@ print('Pipeline loaded!')
      Input('Relationship', 'value'),],
 )
 def predict(Year, VictimAge, VictimCount, PerpetratorCount, AgencyType,
-State, Month, CrimeSolved, VictimSex, VictimRace,
-VictimEthnicity, PerpetratorSex, PerpetratorRace, PerpetratorEthnicity, Relationship):
+            State, Month, CrimeSolved, VictimSex, VictimRace, VictimEthnicity,
+            PerpetratorSex, PerpetratorRace, PerpetratorEthnicity, Relationship):
     df = pd.DataFrame(
-        columns=['Year', 'VictimAge', 'VictimCount', 'PerpetratorCount',
-        'AgencyType', 'State', 'Month', 'CrimeSolved',
-        'VictimSex', 'VictimRace', 'VictimEthnicity', 'PerpetratorSex',
-        'PerpetratorRace', 'PerpetratorEthnicity', 'Relationship'], 
+        columns=['Year', 'Victim Age', 'Victim Count', 'Perpetrator Count',
+        'Agency Type', 'State', 'Month', 'Crime Solved', 'Victim Sex', 'Victim Race',
+        'Victim Ethnicity', 'Perpetrator Sex', 'Perpetrator Race', 'Perpetrator Ethnicity', 'Relationship'], 
         data=[[Year, VictimAge, VictimCount, PerpetratorCount, AgencyType,
-        State, Month, CrimeSolved, VictimSex, VictimRace,
-        VictimEthnicity, PerpetratorSex, PerpetratorRace, PerpetratorEthnicity, Relationship]]
+        State, Month, CrimeSolved, VictimSex, VictimRace, VictimEthnicity, 
+        PerpetratorSex, PerpetratorRace, PerpetratorEthnicity, Relationship]]
     )
     y_pred = pipeline.predict(df)[0]
-    return f'{y_pred:.0f}'
+    return y_pred
 
 # 2 column layout. 1st column width = 4/12
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
